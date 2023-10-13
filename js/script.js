@@ -109,5 +109,18 @@ d3.json("assets/prefectures.geojson").then(data => {
         
         // 結果を表示
         d3.select("#results").text(`正解数: ${correctCount} / ${data.features.length}`);
+        if (correctCount == 47){
+            //d3.select("#message").text("君は知力11だ！おめでとう！");
+            msg = document.getElementById("message");
+            msg.textContent = "君は知力11だ！おめでとう！";
+        } else {
+            msg = document.getElementById("message");
+            msg.textContent = "動画を見て復習しよう！";
+            ytlink = document.createElement("a");
+            ytlink.href = "https://www.youtube.com/live/Sqf8dAJkAhE?si=IABHfylzdVJbof3p";
+            ytlink.innerText = "【日本地図】47都道府県名を答える都道府県クイズ！バカかどうかハッキリさせます！";
+            ytlink.target = "_blank";
+            msg.appendChild(ytlink);
+        }
     });
 });

@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>都道府県クイズ</title>
+    <title>都道府県名クイズ レトラver.</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-
+    <h1>都道府県名クイズ <font color="#d0fd26">レトラver.</font></h1> 
+    <p>全問正解で知力11！レトラが見てる日本はこれだ！（これは何？って人はまずこれを見よう：<a href="https://www.youtube.com/live/Sqf8dAJkAhE?si=IABHfylzdVJbof3p" target="_blank">【日本地図】47都道府県名を答える都道府県クイズ！バカかどうかハッキリさせます！</a>）</p>
+    <p id="caution"><font color="red">※都府県は付けずに答えてください</font></p>
+    
     <div class="container">
         <div id="inputFields"></div> <!-- 入力欄のコンテナ -->
         <div id="mapContainer"> <!-- 地図のコンテナ -->
@@ -18,6 +21,7 @@
         <button id="checkAnswers">答え合わせ</button>
     </div>
     <div id="results"></div>
+    <div id="message"></div>
     
     
 <script src="js/script.js"></script>

@@ -41,6 +41,18 @@
   margin: auto;
 }
 
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+p#caution {
+  margin: 0px 0px 16px 0px;
+}
+
 /* スマホ向けのスタイル */
 @media (max-width: 900px) {
   .container {
@@ -58,5 +70,17 @@
 
   #inputFields > div {
     flex-basis: calc(25% - 10px); /* 入力欄を4列にする */
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p#caution {
+    margin: 0px 0px 16px 0px;
   }
 }
