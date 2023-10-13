@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#inputFields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+#inputFields > div {
+  flex-basis: calc(50% - 10px); /* 入力欄を2列にする */
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+#mapContainer {
+  flex: 2;
+}
+
+#inputFields input[type="text"] {
+  width: 80px;
+  padding: 2px 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+}
+
+/* ボタンの親要素に適用 */
+#ans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#checkAnswers {
+  margin: auto;
+}
+
+/* スマホ向けのスタイル */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #mapContainer {
+    order: 1;
+  }
+
+  #inputFields {
+    order: 2;
+    justify-content: center;
+  }
+
+  #inputFields > div {
+    flex-basis: calc(25% - 10px); /* 入力欄を4列にする */
+  }
+}
