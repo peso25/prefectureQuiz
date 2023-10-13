@@ -43,6 +43,7 @@ d3.json("assets/prefectures.geojson").then(data => {
     svg.selectAll("text")
     .data(data.features)
     .enter().append("text")
+    .attr("id", d => `text${d.properties.pref}`)
     .attr("x", d => path.centroid(d)[0])  // 中心点のX座標
     .attr("y", d => path.centroid(d)[1])  // 中心点のY座標
     .attr("text-anchor", "middle")  // テキストを中心に配置
@@ -51,6 +52,11 @@ d3.json("assets/prefectures.geojson").then(data => {
     .style("font-weight", "bold") // 太く
     .style("pointer-events", "none")  // テキストに対するマウスイベントを無効化
     .text(d => d.properties.pref);  // ラベル名（ここでは都道府県名を想定）
+
+    //表示がズレるので無理やり調整
+    svg.select("#text13").attr("y", d => path.centroid(d)[1]-10);
+    svg.select("#text14").attr("y", d => path.centroid(d)[1]+10);
+
 
     // 入力欄を動的に生成
     const inputArea = d3.select("#inputFields");
